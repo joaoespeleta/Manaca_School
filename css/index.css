@@ -1,4 +1,4 @@
-/* Reset básico */
+/*___________________________________INDEX___________________________________*/
 * {
   margin: 0;
   padding: 0;
@@ -12,38 +12,31 @@ body {
   overflow-x: hidden;
 }
 
-/* Estilização do header */
 header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background: transparent; /* Totalmente transparente */
+  background: transparent; 
   padding: 20px 40px;
   z-index: 1000;
 }
-
-
-/* Efeito de escrita */
 .typing-effect {
-  font-size: 70px; /* Texto bem maior */
+  font-size: 70px; 
   font-weight: bold;
   border-right: 4px solid white;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 2s steps(18, end), blink 0.6s step-end infinite;
-  animation-fill-mode: forwards; /* Mantém o estado final da animação */
+  animation-fill-mode: forwards; 
 }
-
-/* Remove a largura limitada após a animação */
 .typing-effect[data-typed="true"] {
-  overflow: visible; /* Permite que o texto fique visível */
-  border-right: none; /* Remove o cursor piscante após a digitação */
-  animation: none; /* Para qualquer animação no texto */
+  overflow: visible; 
+  border-right: none; 
+  animation: none; 
 }
-/* .hero já configurado conforme informado, mas agora ajustamos o botão */
 .hero {
-  height: 100vh; /* Altura total da tela */
+  height: 100vh; 
   background: url("../img/Scene\ 10.jpg") no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -52,52 +45,45 @@ header {
   text-align: center;
   padding: 20px;
   position: relative;
-  opacity: 0.9; /* Tornar a imagem levemente transparente */
+  opacity: 0.9; 
 }
-
-/* Ajuste para o botão "Conheça Mais" */
 .btn-container {
   position: absolute;
-  bottom: 350px; /* Ajuste para deixar o botão mais perto do texto */
-  left: 50%; /* Centraliza o botão horizontalmente */
-  transform: translateX(-50%); /* Ajusta para garantir que esteja no centro exato */
+  bottom: 350px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
-
-/* Estilos para o botão "Conheça Mais" */
 .btn-conheca-mais {
   display: inline-block;
-  background-color: rgba(255, 215, 0, 0.9); /* Amarelo vibrante */
+  background-color: rgba(255, 215, 0, 0.9); 
   color: black;
   font-size: 16px;
   padding: 15px 30px;
-  border-radius: 0; /* Botão quadrado */
+  border-radius: 0; 
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   transition: transform 0.3s ease, background-color 0.3s ease;
-  animation: pulse 1.5s ease-in-out infinite; /* Animação contínua */
+  animation: pulse 1.5s ease-in-out infinite; 
 }
-
 .btn-conheca-mais:hover {
-  background-color: rgba(255, 193, 7, 1); /* Cor mais intensa no hover */
-  transform: scale(1.1); /* Leve aumento no hover */
+  background-color: rgba(255, 193, 7, 1); 
+  transform: scale(1.1); 
 }
-
 /* Animação Pulse */
 @keyframes pulse {
   0%, 100% {
-    transform: scale(1); /* Tamanho normal */
+    transform: scale(1); 
   }
   50% {
-    transform: scale(1.1); /* Leve aumento */
+    transform: scale(1.1); 
   }
 }
-/* Animação de Bounce no Carregamento */
+/* Animação Bounce no Carregamento */
 .bounce {
   animation: bounce 1s ease;
 }
-
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -115,21 +101,15 @@ header {
     transform: translateY(0);
   }
 }
-
-
-
-
 /* Animação Typing */
 @keyframes typing {
   from {
     width: 0;
   }
   to {
-    width: 18ch; /* Ajuste para o texto completo */
+    width: 18ch; 
   }
 }
-
-/* Animação Blink */
 @keyframes blink {
   from {
     border-color: white;
@@ -138,149 +118,72 @@ header {
     border-color: transparent;
   }
 }
-/*______________________________SEC02______________________________*/
-#sec02{
-  height: 100vh;
-}
 
-/*FAQ----------------------*/
-/* FAQ Section */
-.faq {
-  background-color: black; /* Fundo com tom claro de amarelo */
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.faq-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #b58900; /* Amarelo escuro */
-}
-
-/* Accordion Container */
-.accordion {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.accordion-item {
-  margin-bottom: 10px;
-  border: 1px solid #ffd700; /* Amarelo brilhante */
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-/* Accordion Header */
-.accordion-header {
-  display: block;
-  background-color: #ffeb99; /* Amarelo claro */
-  color: #8a6d00; /* Amarelo escuro para contraste */
-  padding: 15px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.accordion-header:hover {
-  background-color: #ffd700; /* Amarelo mais forte ao passar o mouse */
-  color: #fff;
-}
-
-/* Accordion Content */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  background-color: #fffdfa; /* Tom quase branco com toque de amarelo */
-  padding: 0 20px;
-  transition: max-height 0.3s ease;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Accordion Radio */
-.accordion-radio {
-  display: none;
-}
-
-/* Mostrar conteúdo quando selecionado */
-.accordion-radio:checked + .accordion-header + .accordion-content {
-  max-height: 200px; /* Ajuste conforme o conteúdo */
-  padding: 15px 20px; /* Adiciona espaço interno ao expandir */
-  border-top: 1px solid #ffd700;
-}
 /*______________________________SEC03______________________________*/
-/* Seção Sobre a Escola */
+
+
+
+/*------------ Seção Sobre a Escola ------------*/
 #about-school {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px 10%;
-  background-color: #1a1a1a; /* Fundo escuro */
-  color: #fff; /* Texto branco */
+  background-color: #1a1a1a; 
+  color: #fff; 
   max-height: 100vh;
 }
-
 #about-school .content-wrapper {
   display: flex;
   gap: 50px;
   align-items: center;
-  flex-wrap: wrap; /* Ajuste para telas menores */
+  flex-wrap: wrap; 
 }
-
 #about-school .text-content {
   flex: 1;
 }
-
 #about-school .text-content h2 {
   font-size: 2.5rem;
-  color: #ffd700; /* Amarelo brilhante */
+  color: #ffd700; 
   margin-bottom: 20px;
 }
-
 #about-school .text-content p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: #ccc; /* Cinza claro para contraste */
+  color: #ccc; 
 }
-
 #about-school .learn-more-btn {
   display: inline-block;
   text-decoration: none;
-  background-color: #ffd700; /* Amarelo brilhante */
-  color: #1a1a1a; /* Preto para contraste */
+  background-color: #ffd700; 
+  color: #1a1a1a;
   font-size: 1rem;
   font-weight: bold;
   padding: 12px 24px;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 #about-school .learn-more-btn:hover {
-  background-color: #ffc107; /* Amarelo um pouco mais claro */
+  background-color: #ffc107; 
   transform: scale(1.1);
 }
-
 #about-school .image-content {
   flex: 1;
   text-align: center;
   padding: 5%;
 }
-
 #about-school .image-content img {
-  width: 100%;
+  width: 50vw;
+  height: 85vh;
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5); /* Sombra amarela */
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5); 
   transition: transform 0.3s ease;
 }
-
 #about-school .image-content img:hover {
-  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  transform: scale(1.05); 
 }
-/* Ícones Animados */
 .animated-icons {
   position: relative;
   display: flex;
@@ -288,58 +191,49 @@ header {
   gap: 30px;
   margin-top: 20px;
 }
-
 .animated-icons .icon {
   font-size: 40px;
   color: #ffd700;
-  opacity: 0; /* Ícones invisíveis inicialmente */
-  transform: translateY(30px); /* Ícones fora da posição */
+  opacity: 0; 
+  transform: translateY(30px); 
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 
-/*serviços-home*/
-/* Estilo geral da seção Serviços com Tema Escuro */
+/*------------SERVIÇOS-HOME------------*/
 #services {
   padding: 50px 10%;
-  background-color: #121212; /* Fundo escuro */
-  color: #fff; /* Texto claro */
-  min-height: 100vh; /* Altura mínima de 100% da altura da tela */
+  background-color: #121212;
+  color: #fff; 
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center;
 }
-
 #services h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #ffb400; /* Cor de destaque em amarelo */
+  color: #ffb400; 
   margin-bottom: 20px;
 }
-
 #services p {
   text-align: center;
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto 40px auto;
-  color: #bbb; /* Texto em cinza claro */
+  color: #bbb; 
 }
-
-/* Container dos cards de serviço */
 .services-container {
   text-align: center;
 }
-
-/* Grid para os serviços */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   justify-items: center;
 }
-
 .service-card {
-  background-color: #1e1e1e; /* Fundo dos cartões escuro */
+  background-color: #1e1e1e; 
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -347,49 +241,41 @@ header {
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .service-card:hover {
-  transform: translateY(-10px); /* Efeito de hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Aumento da sombra */
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
 }
-
 .service-card img {
-  width: 120px; /* Tamanho da imagem aumentado */
-  height: 120px; /* Tamanho da imagem aumentado */
-  border-radius: 50%; /* Forma circular para as imagens */
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
   margin-bottom: 20px;
-  object-fit: cover; /* Faz a imagem se ajustar ao espaço sem distorcer */
+  object-fit: cover; 
 }
-
 .service-card h3 {
   font-size: 1.6rem;
-  color: #fff; /* Título branco */
+  color: #fff; 
   margin-bottom: 10px;
 }
-
 .service-card p {
   font-size: 1.1rem;
   margin-bottom: 20px;
-  color: #ccc; /* Texto dos serviços em cinza claro */
+  color: #ccc;
 }
-
 .service-card .btn {
   padding: 12px 20px;
-  background-color: #ffb400; /* Cor do botão amarelo */
-  color: #1a1a1a; /* Texto do botão escuro */
+  background-color: #ffb400;
+  color: #1a1a1a; 
   font-weight: bold;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .service-card .btn:hover {
-  background-color: #e69a00; /* Cor mais escura do botão no hover */
-  transform: scale(1.05); /* Aumento de tamanho no hover */
+  background-color: #e69a00;
+  transform: scale(1.05); 
 }
-
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   #services {
     padding: 40px 5%;
@@ -402,4 +288,67 @@ header {
   .service-card {
     max-width: 100%;
   }
+}
+
+/*______________________________SEC04______________________________*/
+
+
+
+#sec02{
+  height: 100vh;
+}
+
+/*------------FAQ------------*/
+/* FAQ Section */
+.faq {
+  background-color: black; 
+  padding: 40px 20px;
+  text-align: center;
+}
+.faq-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #b58900; 
+}
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.accordion-item {
+  margin-bottom: 10px;
+  border: 1px solid #ffd700; 
+  border-radius: 5px;
+  overflow: hidden;
+}
+.accordion-header {
+  display: block;
+  background-color: #ffeb99; 
+  color: #8a6d00; 
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.accordion-header:hover {
+  background-color: #ffd700; 
+  color: #fff;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fffdfa;
+  padding: 0 20px;
+  transition: max-height 0.3s ease;
+  font-size: 14px;
+  color: #555;
+}
+.accordion-radio {
+  display: none;
+}
+.accordion-radio:checked + .accordion-header + .accordion-content {
+  max-height: 200px; 
+  padding: 15px 20px; 
+  border-top: 1px solid #ffd700;
 }

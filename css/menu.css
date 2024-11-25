@@ -1,7 +1,4 @@
-/* Estilização do header */
-#menu{
 
-  }
   
 /* Navbar */
 .navbar {
@@ -13,12 +10,12 @@
     width: 100%;
     top: 0;
     left: 0;
-    background: transparent; /* Totalmente transparente */
+    background: transparent;
     z-index: 1000;
   }
   
   .logo img {
-    height: 50px; /* Ajuste do tamanho da logo */
+    height: 50px; 
     transition: transform 0.3s ease; 
   }
   .logo img:hover{
@@ -57,3 +54,46 @@
     transform: scale(1.1);
   }
   
+
+  /*------------FOOTER------------*/
+  
+
+  footer {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #333;
+    min-height: 20vh;
+    padding-top: 60px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: #ffb400;
+  }
+
+  .footer-logo img {
+    max-height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .footer-copyright {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 10px;
+  }
