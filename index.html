@@ -3,39 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <script src="js/interatividade.js"></script>
   <title>Futuro</title>
 </head>
+
 <body>
   <!-- Menu -->
-  <header>
+  <header id="menu">
     <nav class="navbar">
       <!-- Logo -->
       <div class="logo">
         <img src="img/logo2-remove.png" alt="Logo">
-      </div>
-
+      </div>  
+  
       <!-- Menu central -->
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#services">Serviços</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servico.html">Serviços</a></li>
       </ul>
-
+  
       <!-- Botão à direita -->
       <div class="contact-btn">
-        <a href="#contact">Contate-nos</a>
+        <a href="contato.ht">Contate-nos</a>
       </div>
     </nav>
   </header>
-
+  
   <section class="hero">
     <h1 class="typing-effect">Welcome to Future!</h1>
     <!-- Div que contém o botão -->
     <div class="btn-container">
-      <a href="#about" class="btn-conheca-mais">Conheça Mais</a>
+      <a href="#about-school" class="btn-conheca-mais">Conheça Mais</a>
     </div>
   </section>
+  <section id="about-school">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <h2>Vamos falar sobre educação futurística?</h2>
+        <p>
+          Nossa escola combina o melhor da tecnologia e inovação para preparar 
+          as crianças para um mundo em constante evolução. Aqui, os alunos exploram 
+          conceitos de robótica, realidade aumentada e inteligência artificial em um ambiente 
+          interativo e envolvente, desenvolvendo habilidades essenciais para o século XXI.
+        </p>
+        <a href="sobre.html" class="learn-more-btn">Saiba Mais</a>
+      </div>
+      <div class="image-content">
+        <img src="img/Scene 4.jpg" alt="Crianças usando tecnologia futurista">
+        <!-- Adicionando ícones -->
+        <div class="animated-icons">
+          <i class="icon fas fa-robot"></i>
+          <i class="icon fas fa-brain"></i>
+          <i class="icon fas fa-laptop-code"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="services">
+    <div class="services-container">
+      <h2>Nossos Serviços</h2>
+      <p>Oferecemos cursos inovadores para preparar nossos alunos para o futuro. Confira abaixo alguns dos nossos serviços:</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="img/Scene 7.jpg" alt="Capacitação em IA">
+          <h3>Capacitação em IA</h3>
+          <p>Aprenda a desenvolver e aplicar algoritmos de inteligências artificais com nossos cursos especializados. Prepare-se para o futuro da tecnologia!</p>
+          <button class="btn">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+          <img src="img/Scene 5.jpg" alt="Curso de Realidade Virtual">
+          <h3>Curso de RV</h3>
+          <p>Explore o Metaverso e aprenda a criar experiências imersivas para plataformas. Utilize a <b>R</b>ealidade <b>V</b>irtual para aumentar suas fronteiras!</p>
+          <button class="btn">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+          <img src="img/Scene_12.jpg" alt="Programação para Iniciantes">
+          <h3>Programação para Iniciantes</h3>
+          <p>Inicie sua jornada no mundo da programação com o curso iniciante, projetados para qualquer pessoa iniciar do zero!</p>
+          <button class="btn">Saiba Mais</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section id="sec03" class="faq">
+    <h2 class="faq-title">Perguntas Frequentes</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="question1" class="accordion-radio">
+        <label for="question1" class="accordion-header">O que é o site "Future"?</label>
+        <div class="accordion-content">
+          <p>O site "Future" é uma plataforma que explora a visão criativa sobre o futuro em áreas como tecnologia, educação e inovação.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="question2" class="accordion-radio">
+        <label for="question2" class="accordion-header">Como acessar as informações adicionais?</label>
+        <div class="accordion-content">
+          <p>Basta navegar pelas seções ou clicar no botão "Conheça Mais" na página inicial.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="question3" class="accordion-radio">
+        <label for="question3" class="accordion-header">O site é responsivo?</label>
+        <div class="accordion-content">
+          <p>Sim, nosso site foi projetado para oferecer a melhor experiência em qualquer dispositivo, seja desktop, tablet ou celular.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
   
   
 </body>

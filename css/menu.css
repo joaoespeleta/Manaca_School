@@ -1,0 +1,59 @@
+/* Estilização do header */
+#menu{
+
+  }
+  
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent; /* Totalmente transparente */
+    z-index: 1000;
+  }
+  
+  .logo img {
+    height: 50px; /* Ajuste do tamanho da logo */
+    transition: transform 0.3s ease; 
+  }
+  .logo img:hover{
+    transform: scale(1.1); 
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffd700;
+  }
+  
+  .contact-btn a {
+    text-decoration: none;
+    background: #ffd700;
+    color: black;
+    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-btn a:hover {
+    background: #ffc107;
+    transform: scale(1.1);
+  }
+  

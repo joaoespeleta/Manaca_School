@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/servico.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <title>Indicação de Curso</title>
+</head>
+<body>
+ <!-- Menu -->
+ <header id="menu">
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="img/logo2-remove.png" alt="Logo">
+      </div>  
+  
+      <!-- Menu central -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servico.html">Serviços</a></li>
+      </ul>
+  
+      <!-- Botão à direita -->
+      <div class="contact-btn">
+        <a href="contato.ht">Contate-nos</a>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Qual curso é o melhor para você?</h1>
+    
+    <form id="quizForm">
+      <div class="question">
+        <p>1. Qual é o seu objetivo principal com o curso?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q1" value="AI">
+            Aprender Inteligência Artificial
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="Metaverse">
+            Explorar o Metaverso
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="Business">
+            Desenvolver habilidades de negócios
+          </label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>2. Qual área mais te interessa?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q2" value="AI">
+            Tecnologia e Inovação
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="Metaverse">
+            Realidade Virtual
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="Business">
+            Gestão e Empreendedorismo
+          </label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>3. Você já tem alguma experiência na área?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q3" value="Yes">
+            Sim, tenho experiência
+          </label>
+          <label class="option">
+            <input type="radio" name="q3" value="No">
+            Não, sou iniciante
+          </label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>4. Prefere aprender de forma prática ou teórica?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q4" value="Practical">
+            Prática
+          </label>
+          <label class="option">
+            <input type="radio" name="q4" value="Theoretical">
+            Teórica
+          </label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>5. O que mais lhe atrai?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q5" value="AI">
+            Resolver problemas complexos com IA
+          </label>
+          <label class="option">
+            <input type="radio" name="q5" value="Metaverse">
+            Criar experiências imersivas
+          </label>
+          <label class="option">
+            <input type="radio" name="q5" value="Business">
+            Ajudar empresas a crescer
+          </label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>6. Você se considera uma pessoa criativa?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q6" value="Yes">
+            Sim
+          </label>
+          <label class="option">
+            <input type="radio" name="q6" value="No">
+            Não
+          </label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>7. Você prefere cursos com alto grau de flexibilidade?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q7" value="Yes">
+            Sim
+          </label>
+          <label class="option">
+            <input type="radio" name="q7" value="No">
+            Não
+          </label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>8. Você gostaria de uma área com grande potencial de crescimento no mercado?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q8" value="Yes">
+            Sim
+          </label>
+          <label class="option">
+            <input type="radio" name="q8" value="No">
+            Não
+          </label>
+        </div>
+      </div>
+
+      <button type="button" class="button" onclick="submitQuiz()">Ver Resultado</button>
+    </form>
+
+    <div class="result" id="result">
+      <h2 id="resultTitle"></h2>
+      <p id="resultDescription"></p>
+    </div>
+  </div>
+
+  <script>
+    function submitQuiz() {
+      const form = document.forms['quizForm'];
+      let answers = [];
+      
+      // Verifica se todas as perguntas foram respondidas
+      for (let i = 1; i <= 8; i++) {
+        const answer = form[`q${i}`].value;
+        if (!answer) {
+          alert(`Por favor, responda todas as perguntas.`);
+          return;
+        }
+        answers.push(answer);
+      }
+
+      // Simples lógica de recomendação com base nas respostas
+      let course = '';
+      if (answers.includes('AI') && answers.includes('Yes')) {
+        course = 'Curso de Inteligência Artificial - Aprenda as habilidades essenciais para dominar IA!';
+      } else if (answers.includes('Metaverse') && answers.includes('Practical')) {
+        course = 'Curso de Realidade Virtual - Explore o futuro do Metaverso e crie experiências imersivas!';
+      } else if (answers.includes('Business') && answers.includes('Yes')) {
+        course = 'Curso de Gestão de Negócios - Adquira habilidades essenciais para gerenciar empresas!';
+      } else {
+        course = 'Curso Geral - Um curso básico para quem quer começar a aprender!';
+      }
+
+      // Mostrar o resultado
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('resultTitle').innerText = 'Recomendação de Curso';
+      document.getElementById('resultDescription').innerText = course;
+    }
+  </script>
+
+</body>
+</html>
